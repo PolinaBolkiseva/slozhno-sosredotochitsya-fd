@@ -10,9 +10,9 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-main-color: #000028;
-  --bg-accent-color: #FF0070;
-  --font-color: #F1B2CE;
-  --font-heder-color:  #DB00FF;
-  --font-invers-color:  #000028;
+  --bg-accent-color: #ff0070;
+  --font-color: #f1b2ce;
+  --font-heder-color: #db00ff;
+  --font-invers-color: #000028;
   --bg-img: url(../images/cover-image-dark.png);
 }

@@ -2,16 +2,23 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
-:root{
+:root {
   --bg-main-color: #000028;
-  --bg-accent-color: #FF0070;
-  --font-color: #F1B2CE;
-  --font-heder-color:  #DB00FF;
-  --font-invers-color:  #000028;
+  --bg-accent-color: #ff0070;
+  --font-accent-color: #ff0070;
+  --font-color: #f1b2ce;
+  --font-heder-color: #db00ff;
+  --font-invers-color: #000028;
   --font-size: calc(18 / 16 * 1rem);
-  --font-family: 'IBM Plex mono', sans-serif;
+  --font-family: "IBM Plex mono", sans-serif;
   --font-weight: 400;
   --font-weight-bold: 700;
   --bg-img: url(../images/cover-image-dark.png);
   --padding-size: 10px;
+  --page-gap: 40px;
+  --content-gap: 50px;
+  /*decorated elements*/
+  --saze-of-corner: 25px;
+  --saze-of-point: 9px;
+  --saze-of-point-shadow: 2px;
 }
