@@ -22,3 +22,11 @@
   --saze-of-point: 9px;
   --saze-of-point-shadow: 2px;
 }
+
+@media (width >= 768px) {
+  :root {
+    --padding-size: 20px;
+    --page-gap: 60px;
+    --content-gap: 80px;
+  }
+}
