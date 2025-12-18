@@ -9,6 +9,20 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-main-color: #fff1f7;
+  --bg-accent-color: #ff8dcb;
+  --font-accent-color: #353430;
+  --font-color: #353430;
+  --font-heder-color: #ffc2e6;
+  --font-invers-color: #353430;
+  --bg-img: url(../images/cover-image-light.png);
+  .decorated-span {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
     --bg-main-color: #fff1f7;
     --bg-accent-color: #ff8dcb;
     --font-accent-color: #353430;
@@ -16,24 +30,8 @@
     --font-heder-color: #ffc2e6;
     --font-invers-color: #353430;
     --bg-img: url(../images/cover-image-light.png);
-    .decorated-span{
-        display: none;
+    .decorated-span {
+      display: none;
     }
   }
-
-  @media(prefers-color-scheme: light) {
-    :root.theme-auto{
-      --bg-main-color: #fff1f7;
-      --bg-accent-color: #ff8dcb;
-      --font-accent-color: #353430;
-      --font-color: #353430;
-      --font-heder-color: #ffc2e6;
-      --font-invers-color: #353430;
-      --bg-img: url(../images/cover-image-light.png);  
-      background: green;
-      .decorated-span{
-        display: none;
-      }
-    }
-  }
-
+}

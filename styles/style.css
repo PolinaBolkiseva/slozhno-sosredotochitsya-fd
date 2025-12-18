@@ -40,8 +40,9 @@
 
 .header__theme-menu-button {
   border: none;
+  border-bottom: 1px solid transparent;
   padding: 0 13px;
-  font-family: var(--font-family), sans-serif;;
+  font-family: var(--font-family), sans-serif;
   font-weight: var(--font-weight);
   line-height: 1;
   letter-spacing: 0;
@@ -50,7 +51,6 @@
   inline-size: max-content;
   inline-size: 70px;
   block-size: 25px;
-  border-bottom: 1px solid transparent;
 }
 .header__theme-menu-button_active {
   outline: 1px solid var(--font-accent-color);
@@ -96,10 +96,12 @@ header__theme-menu-button_type_light
 }
 .decorated-span {
   position: absolute;
-  inset: calc(var(--padding-size) - 1px) 
-         calc(var(--padding-size) + var(--saze-of-corner) - (var(--saze-of-point)/2 + var(--saze-of-point-shadow)))
-         auto 
-         auto;
+  inset: calc(var(--padding-size) - 1px)
+    calc(
+      var(--padding-size) + var(--saze-of-corner) -
+        (var(--saze-of-point) / 2 + var(--saze-of-point-shadow))
+    )
+    auto auto;
   color: var(--bg-accent-color);
   font-family: var(--font-family), sans-serif;
   font-weight: 400;
@@ -110,8 +112,8 @@ header__theme-menu-button_type_light
 .decorated-span::after {
   content: "";
   position: relative;
-  inset: auto auto var(--saze-of-point-shadow) 
-         calc(var(--saze-of-corner)/2 - var(--saze-of-point)/2);
+  inset: auto auto var(--saze-of-point-shadow)
+    calc(var(--saze-of-corner) / 2 - var(--saze-of-point) / 2);
   display: inline-block;
   border-radius: 50%;
   box-shadow: 0 0 4px var(--saze-of-point-shadow) var(--bg-accent-color);
@@ -164,19 +166,19 @@ header__theme-menu-button_type_light
   gap: 10px;
 }
 .beautiful_link {
-  text-shadow: 0.12em 0.05em var(--bg-accent-color);
   border: 1px solid transparent;
   text-decoration: none;
+  text-shadow: 0.12em 0.05em var(--bg-accent-color);
 }
 .beautiful_link:hover {
-  outline: none;
   border-bottom: 1px solid var(--font-color);
+  outline: none;
   cursor: pointer;
 }
 .beautiful_link:focus {
+  border: 1px solid transparent;
   outline: none;
   text-decoration: none;
-  border: 1px solid transparent;
 }
 .beautiful_link:focus-visible {
   /*outline: 1px solid var(--font-color);*/
@@ -217,15 +219,15 @@ header__theme-menu-button_type_light
     margin-left: calc(-1 * var(--padding-size));
     font-size: clamp(7.5rem, 0.56rem + 14.45vw, 9.8125rem);
   }
-  .section_cards_in_column {
+  .section_cards_reasons_and_advices {
     grid-template-columns: 1fr 2fr;
   }
 
-  .section_cards_in_column .section_title {
+  .section_cards_reasons_and_advices .section_title {
     /*grid-row: 1 / -1;/* не работает:_(*/
     grid-row: 1 / sibling-count();
   }
-  .section_cards_in_row .section_title {
+  .section_cards_factors .section_title {
     inline-size: min-content;
   }
 
@@ -252,18 +254,18 @@ header__theme-menu-button_type_light
 }
 
 @media (width >= 1024px) {
-  .section_cards_in_column {
+  .section_cards_reasons_and_advices {
     column-gap: 10px; /*значение найдено через picsel-perfect */
   }
-  .section_cards_in_row {
+  .section_cards_factors {
     /*grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));*/
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
 
-  .section_cards_in_row .section_title {
-    inline-size: calc((100% - 2*var(--padding-size))/3);
+  .section_cards_factors .section_title {
     grid-column: 1 / 4;
+    inline-size: calc((100% - 2 * var(--padding-size)) / 3);
   }
   .header__theme-menu {
     justify-self: center;
